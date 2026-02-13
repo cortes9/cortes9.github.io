@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Luis Cortes| CS Portfolio</title>
+  <style>
+    :root { --max: 980px; }
+    body { margin:0; font-family: Arial, Helvetica, sans-serif; line-height:1.6; }
+    header { padding: 48px 16px; border-bottom: 1px solid #e5e5e5; }
+    main { padding: 24px 16px 64px; }
+    .wrap { max-width: var(--max); margin: 0 auto; }
+    h1 { margin: 0 0 8px; font-size: 32px; }
+    .sub { margin: 0; opacity: 0.8; }
+    .links a { margin-right: 12px; }
+    section { margin-top: 28px; }
+    h2 { margin: 0 0 10px; font-size: 22px; }
+    .card {
+      border: 1px solid #e5e5e5; border-radius: 12px; padding: 16px;
+      margin: 12px 0; box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+    }
+    .tag { display:inline-block; padding: 4px 10px; border: 1px solid #e5e5e5; border-radius: 999px; margin: 4px 8px 0 0; font-size: 12px; }
+    ul { margin: 10px 0 0 18px; }
+    footer { border-top: 1px solid #e5e5e5; padding: 18px 16px; }
+    .muted { opacity: 0.75; }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="wrap">
+      <h1>Luis Cortes</h1>
+      <p class="sub">Computer Science Student | Software Development</p>
+
+      <p class="links">
+        <a href="mailto:luis.cortes@csulb.edu">Email</a>
+        <a href="cortes9.github.io/" target="_blank" rel="noreferrer">GitHub</a>
+      </p>
+    </div>
+  </header>
+
+  <main>
+    <div class="wrap">
+      <section>
+        <h2>About</h2>
+        <p>
+          I am a Computer Science student with experience in C++ object-oriented programming and Python/Flask development.
+          I like building practical projects, especially image tools using OpenCV and clean API-based services.
+        </p>
+      </section>
+
+      <section>
+        <h2>Skills</h2>
+        <div>
+          <span class="tag">C++</span>
+          <span class="tag">Python</span>
+          <span class="tag">Flask</span>
+          <span class="tag">OpenCV</span>
+          <span class="tag">REST APIs</span>
+          <span class="tag">Git/GitHub</span>
+          <span class="tag">HTML/CSS</span>
+        </div>
+      </section>
+
+      <section>
+        <h2>Projects</h2>
+
+        <div class="card">
+          <h3 style="margin:0 0 6px;">Flask Image Editing Web App</h3>
+          <div class="muted">Python • Flask • OpenCV • HTML/CSS</div>
+          <p>
+            Web app that lets users upload images and apply filters using OpenCV. Focused on reliable processing and a simple user flow.
+          </p>
+          <ul>
+            <li>Image upload + processing pipeline</li>
+            <li>Multiple filters (grayscale, blur, edges, etc.)</li>
+            <li>Organized routes and clean project structure</li>
+          </ul>
+          <p><strong>Link:</strong> <a href="YOUR_GITHUB_PROJECT_LINK" target="_blank" rel="noreferrer">GitHub Repo</a></p>
+        </div>
+
+        <div class="card">
+          <h3 style="margin:0 0 6px;">API-Only Image Processing Service</h3>
+          <div class="muted">Flask • OpenCV • REST</div>
+          <p>
+            Backend service providing image-processing endpoints that return processed outputs. Designed to be easy to test and extend.
+          </p>
+          <ul>
+            <li>REST endpoints for filters</li>
+            <li>Clear request/response format</li>
+            <li>Modular filter functions</li>
+          </ul>
+          <p><strong>Link:</strong> <a href="YOUR_GITHUB_PROJECT_LINK" target="_blank" rel="noreferrer">GitHub Repo</a></p>
+        </div>
+
+        <div class="card">
+          <h3 style="margin:0 0 6px;">C++ OOP Project (Package Management)</h3>
+          <div class="muted">C++ • OOP • STL</div>
+          <p>
+            Implemented classes using inheritance, polymorphism, and operator overloading, with STL containers for efficient storage and searching.
+          </p>
+          <ul>
+            <li>Operator overloading (comparison/output)</li>
+            <li>Virtual functions + class design</li>
+            <li>set/multiset usage for sorting/search</li>
+          </ul>
+          <p><strong>Link:</strong> <a href="YOUR_GITHUB_PROJECT_LINK" target="_blank" rel="noreferrer">GitHub Repo</a></p>
+        </div>
+      </section>
+
+      <section>
+        <h2>Education</h2>
+        <p><strong>[School Name]</strong> — Computer Science<br/>
+        Expected Graduation: [Month Year]</p>
+      </section>
+
+      <section>
+        <h2>Service Learning / Interests</h2>
+        <p>
+          I’m interested in software development and backend work, especially projects involving practical tools, APIs, and computer vision.
+        </p>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <div class="wrap muted">
+      © <span id="y"></span> Luis [Last Name]
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
