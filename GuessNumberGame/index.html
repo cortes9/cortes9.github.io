@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Guess the Number</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="headerBox">
+    <h1>Guess the Number</h1>
+    <p class="subtitle">Guess a number from 1 to 99. You have 7 attempts.</p>
+  </header>
+
+  <main class="gameBox">
+    <form id="gameForm">
+      <label class="label" for="playerGuess">Guess:</label>
+      <div class="controls">
+        <input id="playerGuess" type="text" size="5" inputmode="numeric">
+        <button id="guessBtn" type="button">Submit Guess</button>
+        <button id="resetBtn" type="button">Reset</button>
+      </div>
+    </form>
+
+    <div class="statsRow">
+      <div class="statCard">
+        <div class="statTitle">Attempts Left</div>
+        <div class="statValue" id="attemptsLeft">7</div>
+      </div>
+      <div class="statCard">
+        <div class="statTitle">Wins</div>
+        <div class="statValue" id="wins">0</div>
+      </div>
+      <div class="statCard">
+        <div class="statTitle">Losses</div>
+        <div class="statValue" id="losses">0</div>
+      </div>
+    </div>
+
+    <div id="feedback" class="feedback"></div>
+
+    <div class="guessesBox">
+      <div class="guessesTitle">Previous guesses:</div>
+      <span id="previousGuesses" class="guessesLine"></span>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
