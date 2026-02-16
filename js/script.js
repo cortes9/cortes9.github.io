@@ -24,7 +24,8 @@ function initializeGame() {
   attempts = 0;
 
   feedback.textContent = "";
-  feedback.className = "feedback";
+  feedback.style.color = "black";
+
   previousGuesses.textContent = "";
   attemptsLeftEl.textContent = MAX_ATTEMPTS;
 
@@ -32,32 +33,46 @@ function initializeGame() {
   input.value = "";
   input.focus();
 
-  guessBtn.disabled = false;
   guessBtn.style.display = "inline-block";
   resetBtn.style.display = "none";
 }
 
 function checkGuess() {
+  const guess = parseInt(input.value);
+
   feedback.textContent = "";
-  feedback.className = "feedback";
+  feedback.style.color = "black";
 
-  const guess = parseInt(input.value, 10);
-
-  if (isNaN(guess) || guess < 1 || guess > 99) {
+  if (isNaN(guess)) {
     feedback.textContent = "Enter a valid number between 1 and 99.";
-    feedback.classList.add("bad");
+    feedback.style.color = "red";
+    return;
+  }
+
+  if (guess > 99) {
+    feedback.textContent = "Error: Number is higher than 99.";
+    feedback.style.color = "red";
+    return;
+  }
+
+  if (guess < 1) {
+    feedback.textContent = "Error: Number must be at least 1.";
+    feedback.style.color = "red";
     return;
   }
 
   attempts++;
   attemptsLeftEl.textContent = MAX_ATTEMPTS - attempts;
+
   previousGuesses.textContent += guess + " ";
 
   if (guess === randomNumber) {
     wins++;
     winsEl.textContent = wins;
-    feedback.textContent = "Congratulations! You guessed the number in " + attempts + " attempt(s).";
-    feedback.classList.add("good");
+
+    feedback.textContent = "Congratulations! You guessed it in " + attempts + " attempts!";
+    feedback.style.color = "green";
+
     endGame();
     return;
   }
@@ -65,27 +80,26 @@ function checkGuess() {
   if (attempts >= MAX_ATTEMPTS) {
     losses++;
     lossesEl.textContent = losses;
+
     feedback.textContent = "You Lost! The number was " + randomNumber + ".";
-    feedback.classList.add("lost");
+    feedback.style.color = "red";
+
     endGame();
     return;
   }
 
   if (guess < randomNumber) {
-    feedback.textContent = "Too low — try a higher number.";
-    feedback.classList.add("hint");
+    feedback.textContent = "Too low! Try a higher number.";
   } else {
-    feedback.textContent = "Too high — try a lower number.";
-    feedback.classList.add("hint");
+    feedback.textContent = "Too high! Try a lower number.";
   }
 
   input.value = "";
+  input.focus();
 }
 
 function endGame() {
-  guessBtn.disabled = true;
   guessBtn.style.display = "none";
   resetBtn.style.display = "inline-block";
   input.disabled = true;
 }
-
