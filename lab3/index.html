@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pokemon Quiz</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+
+        h3 {
+            color: darkblue;
+        }
+
+        button {
+            background-color: blue;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: darkblue;
+        }
+
+        input, select {
+            margin: 5px 0;
+            padding: 5px;
+        }
+
+        div {
+            margin-bottom: 15px;
+        }
+
+        img {
+            margin-right: 5px;
+        }
+
+        #totalScore {
+            color: green;
+            font-size: 20px;
+        }
+
+        #congrats {
+            color: purple;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+<h2>Pokemon Quiz</h2>
+
+<!-- Question 1 -->
+<h3>Question 1 (Radio)</h3>
+<p>What is Blastoise typing?</p>
+<div id="q1ChoicesDiv"></div>
+<div id="q1Feedback"></div>
+
+<!-- Question 2 -->
+<h3>Question 2 (Text)</h3>
+<p>What is the main character's name of the Pokemon Series?</p>
+<label for="q2Answer">Answer:</label>
+<input type="text" id="q2Answer">
+<div id="q2Feedback"></div>
+
+<!-- Question 3 -->
+<h3>Question 3 (Dropdown)</h3>
+<p>What is Gengar's typing?</p>
+<label for="q3Answer">Choose:</label>
+<select id="q3Answer">
+    <option value="">Select One</option>
+    <option value="Ghost">Ghost</option>
+    <option value="Dark">Dark</option>
+    <option value="Psychic">Psychic</option>
+</select>
+<div id="q3Feedback"></div>
+
+<!-- Question 4 -->
+<h3>Question 4 (Number)</h3>
+<p>How many Pokemon are there in the Pokedex?</p>
+<label for="q4Answer">Number:</label>
+<input type="number" id="q4Answer">
+<div id="q4Feedback"></div>
+
+<!-- Question 5 -->
+<h3>Question 5 (Checkbox)</h3>
+<p>Which type is super effective against Water?</p>
+
+<input type="checkbox" id="electric" name="q5" value="Electric">
+<label for="electric">Electric</label>
+
+<input type="checkbox" id="fire" name="q5" value="Fire">
+<label for="fire">Fire</label>
+
+<input type="checkbox" id="normal" name="q5" value="Normal">
+<label for="normal">Normal</label>
+
+<div id="q5Feedback"></div>
+
+<br>
+<button id="submitQuiz">Submit Quiz</button>
+
+<h2 id="totalScore"></h2>
+<h3 id="congrats"></h3>
+<h3 id="timesTaken"></h3>
+
+<script src="js/underscore.js"></script>
+<script src="js/script.js"></script>
+
+</body>
+</html>
