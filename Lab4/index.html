@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab4: Sign up</title>
+</head>
+
+<body>
+    <h1> Sign Up Form </h1>
+
+    <fieldset>
+        <legend>Sign Up</legend>
+        First Name: <input type="text"><br>
+        Last Name: <input type="text"><br>
+        Email: <input type="text"><br>
+        Phone Number:<input type="text"><br><br>
+
+        Zip Code: <input id="zipCode" type="text">
+        <span id="zipMsg"></span><br> <!-- added zip message -->
+
+        City:<span id="city"></span>
+        <br>
+        Latitude: <span id="latitude"></span>
+        <br>
+        Longitude: <span id="longitude"></span>
+        <br><br>
+
+        State: <select id="state">
+            <option value="AL">Alabama</option>
+        </select><br>
+
+        Select a County: <select id="county">
+        </select><br>
+
+        Desired Username: <input id="user" type="text"> 
+        <span id="user2"></span><br>
+
+        Password: <input id="pass2" type="password"> 
+        <span id="pass"></span><br>
+
+        Type Password Again: <input id="pass3" type="password"><br> <!-- added id -->
+
+        <input id="submitBtn" type="submit" value="Sign up!"> <!-- added id -->
+    </fieldset>
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>
